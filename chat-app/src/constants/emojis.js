@@ -1,0 +1,72 @@
+export const EMOJI_CATEGORIES = [
+  { id: 'all', label: 'All' },
+  { id: 'smileys', label: 'Smileys' },
+  { id: 'gestures', label: 'Gestures' },
+  { id: 'hearts', label: 'Hearts' },
+  { id: 'objects', label: 'Objects' },
+];
+
+export const EMOJI_LIST = [
+  // Smileys
+  { emoji: '😀', name: 'grinning face', category: 'smileys' },
+  { emoji: '😃', name: 'smiling with big eyes', category: 'smileys' },
+  { emoji: '😄', name: 'smiling with squint eyes', category: 'smileys' },
+  { emoji: '😁', name: 'beaming smile', category: 'smileys' },
+  { emoji: '😆', name: 'laughing laughing closed eyes', category: 'smileys' },
+  { emoji: '😅', name: 'sweat smile nervous', category: 'smileys' },
+  { emoji: '😂', name: 'joy tears of joy laugh', category: 'smileys' },
+  { emoji: '🤣', name: 'rofl rolling laughing', category: 'smileys' },
+  { emoji: '😊', name: 'warm smile blush happy', category: 'smileys' },
+  { emoji: '😇', name: 'angel halo innocent', category: 'smileys' },
+  { emoji: '🙂', name: 'slight smile', category: 'smileys' },
+  { emoji: '😉', name: 'wink playful', category: 'smileys' },
+  { emoji: '😍', name: 'heart eyes love', category: 'smileys' },
+  { emoji: '🤩', name: 'star struck excited', category: 'smileys' },
+  { emoji: '😎', name: 'cool sunglasses chill', category: 'smileys' },
+  { emoji: '🥳', name: 'party celebrate celebration', category: 'smileys' },
+  { emoji: '🤔', name: 'thinking wonder question', category: 'smileys' },
+  { emoji: '🤗', name: 'hugging warm friendly', category: 'smileys' },
+  { emoji: '🤫', name: 'shushing quiet secret', category: 'smileys' },
+  { emoji: '😴', name: 'sleeping tired sleep', category: 'smileys' },
+
+  // Gestures
+  { emoji: '👋', name: 'waving wave hello hi bye', category: 'gestures' },
+  { emoji: '👍', name: 'thumbs up like good yes approve', category: 'gestures' },
+  { emoji: '👎', name: 'thumbs down dislike bad no', category: 'gestures' },
+  { emoji: '👏', name: 'clapping applause bravo cheer', category: 'gestures' },
+  { emoji: '🙌', name: 'raising hands celebration hooray', category: 'gestures' },
+  { emoji: '🤝', name: 'handshake deal agree partner', category: 'gestures' },
+  { emoji: '✌️', name: 'peace sign victory', category: 'gestures' },
+  { emoji: '🤞', name: 'crossed fingers good luck hope', category: 'gestures' },
+  { emoji: '👌', name: 'ok hand perfect fine', category: 'gestures' },
+  { emoji: '💪', name: 'flexed biceps muscle strong power', category: 'gestures' },
+  { emoji: '🙏', name: 'folded hands pray thank you please', category: 'gestures' },
+  { emoji: '👊', name: 'fist bump punch', category: 'gestures' },
+
+  // Hearts
+  { emoji: '❤️', name: 'red heart love like', category: 'hearts' },
+  { emoji: '🧡', name: 'orange heart love', category: 'hearts' },
+  { emoji: '💛', name: 'yellow heart friendship', category: 'hearts' },
+  { emoji: '💚', name: 'green heart love eco', category: 'hearts' },
+  { emoji: '💙', name: 'blue heart trust peace', category: 'hearts' },
+  { emoji: '💜', name: 'purple heart luxury', category: 'hearts' },
+  { emoji: '💖', name: 'sparkling heart love shine', category: 'hearts' },
+  { emoji: '🔥', name: 'fire hot flame trend lit', category: 'hearts' },
+  { emoji: '✨', name: 'sparkles stars magic sparkle clean', category: 'hearts' },
+  { emoji: '🎉', name: 'tada celebration party congrats', category: 'hearts' },
+  { emoji: '🚀', name: 'rocket ship launch fast zoom speed', category: 'hearts' },
+  { emoji: '⭐', name: 'star favorite rating best', category: 'hearts' },
+
+  // Objects
+  { emoji: '💻', name: 'laptop computer code tech work', category: 'objects' },
+  { emoji: '📱', name: 'phone mobile smartphone', category: 'objects' },
+  { emoji: '💡', name: 'lightbulb idea smart think', category: 'objects' },
+  { emoji: '☕', name: 'coffee tea break drink morning', category: 'objects' },
+  { emoji: '🍕', name: 'pizza food lunch dinner', category: 'objects' },
+  { emoji: '🎯', name: 'target goal direct hit bulls eye', category: 'objects' },
+  { emoji: '🏆', name: 'trophy winner prize award first', category: 'objects' },
+  { emoji: '📦', name: 'package parcel delivery box', category: 'objects' },
+  { emoji: '💬', name: 'chat speech bubble message conversation', category: 'objects' },
+  { emoji: '✅', name: 'check mark done complete correct', category: 'objects' },
+];
+

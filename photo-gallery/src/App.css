@@ -1,0 +1,286 @@
+/* =========================================================
+   EXACTSPACE PHOTO GALLERY STYLES
+   Matches the supplied photo-gallery.jpg / photo-gallery.png reference
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gallery-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 40px 60px;
+  position: relative;
+}
+
+/* ---------------------------------------------------------
+   HEADER
+   Matches the reference screenshot's "Photo gallery" heading
+   --------------------------------------------------------- */
+.gallery-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20%;
+  margin-bottom: 24px;
+}
+
+.gallery-title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: -0.5px;
+}
+
+/* ---------------------------------------------------------
+   PHOTO GALLERY FEED (1-COLUMN VERTICAL LAYOUT)
+   --------------------------------------------------------- */
+.gallery-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+}
+
+/* PHOTO CARD ITEM */
+.photo-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.15s ease;
+}
+
+/* PHOTO IMAGE CONTAINER */
+.photo-image-wrapper {
+  width: 250px;
+  height: 165px;
+  min-width: 250px;
+  background-color: #f3f4f6;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.photo-image.loading {
+  opacity: 0;
+}
+
+.photo-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: skeletonPulse 1.5s infinite;
+}
+
+@keyframes skeletonPulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.photo-fallback {
+  font-size: 12px;
+  color: #9ca3af;
+  text-align: center;
+  padding: 10px;
+}
+
+/* PHOTO META (AUTHOR & LIKE BUTTON) */
+.photo-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.photo-author-label {
+  white-space: nowrap;
+}
+
+.photo-like-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  color: #1877f2; /* Official Facebook / Font Awesome vibrant blue */
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.photo-like-btn:hover {
+  transform: scale(1.15);
+  filter: brightness(0.9);
+}
+
+.photo-like-btn:active {
+  transform: scale(0.95);
+}
+
+.photo-like-btn.anim-pulse {
+  animation: thumbsPop 0.25s ease-out;
+}
+
+@keyframes thumbsPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.photo-like-count {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1877f2;
+  user-select: none;
+}
+
+/* ---------------------------------------------------------
+   STATUS INDICATORS (LOADING, ERROR, END OF FEED)
+   --------------------------------------------------------- */
+.gallery-sentinel {
+  height: 20px;
+  margin: 10px 0;
+}
+
+.gallery-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #1877f2;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gallery-error-banner {
+  margin: 20px 0;
+  padding: 16px 20px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #991b1b;
+  max-width: 800px;
+}
+
+.error-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.retry-btn {
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.retry-btn:hover {
+  background-color: #b91c1c;
+}
+
+.gallery-end-banner {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+  font-size: 14px;
+  font-style: italic;
+  max-width: 800px;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE DESIGN
+   --------------------------------------------------------- */
+@media (max-width: 768px) {
+  .gallery-page-container {
+    padding: 20px 16px;
+  }
+
+  .gallery-header {
+    justify-content: center;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .gallery-title {
+    font-size: 28px;
+  }
+
+  .photo-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 16px;
+  }
+
+  .photo-image-wrapper {
+    width: 100%;
+    height: 220px;
+    min-width: unset;
+  }
+}
+
